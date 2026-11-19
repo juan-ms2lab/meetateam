@@ -29,7 +29,7 @@ apt-get install -y --no-install-recommends \
   psmisc fonts-dejavu fonts-noto-color-emoji dbus-user-session
 [ "$(dpkg --print-architecture)" = amd64 ] && apt-get install -y intel-media-va-driver
 
-id "$U" >/dev/null 2>&1 || useradd -m -G video,audio,input,render "$U"
+id "$U" >/dev/null 2>&1 || /usr/sbin/useradd -m -G video,audio,input,render "$U"
 
 echo "URL=$URL" > /etc/kiosk.conf
 
