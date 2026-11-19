@@ -11,7 +11,7 @@
 #   ENABLE_TEAMS = true/false (default true).
 #   ENABLE_ZOOM  = true/false (default true).
 set -euo pipefail
-: "${URL:?set URL=https://your-calendar-page}"
+URL="${URL:-https://www.google.com}"
 RES="${RES:-}"
 ROOM_NAME="${ROOM_NAME:-}"
 IDLE_BLANK="${IDLE_BLANK:-180}"
